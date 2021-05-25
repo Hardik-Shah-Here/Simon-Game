@@ -34,7 +34,7 @@ function checkAnswer(currentLevel)
         $("body").addClass("game-over");
         setTimeout(function(){
             $("body").removeClass("game-over");
-        }, 200);
+        }, 300);
         
         $("#level-title").text("Game Over! Press New Game to Restart");
     }
@@ -49,7 +49,7 @@ function nextSequence()
     let randomChosenColour = buttonColours[randomNumber];
     gamePattern.push(randomChosenColour);
 
-    $("#"+randomChosenColour).fadeOut(200).fadeIn(200);
+    $("#"+randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
     playSound(randomChosenColour);
 
     $("#level-title").text("Level "+level);
